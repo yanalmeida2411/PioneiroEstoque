@@ -1,0 +1,154 @@
+.allSectionContent{
+    background-color: rgba(245, 245, 245, 0.482);
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    z-index: 5;
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.allSectionContent div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    gap: 5px;
+    border:1px solid black;
+    background-image: url(../../../produtosFundo.png);
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    color: white;
+}
+
+.allSectionContent label{
+    font-size: 20px;
+}
+
+.allSectionContent input{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+    height: 5vh;
+    width: 80%;
+}
+
+.closeRegister{
+    border: none;
+    width: 5%;
+    height: 5%;
+    border-radius: 30%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.815);
+    border-radius: 50px;
+    opacity: 0.7;
+    font-weight: bold;
+    position: absolute;
+    right:10px ;
+    top: 5px;
+    color: white;
+}
+
+.closeRegister:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.closeRegister:active{
+    scale: 0.9;
+}
+
+.registerProduct{
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    opacity: 0.8;
+    border-radius: 10px;
+
+}
+
+.registerProduct:hover{
+    opacity: 1;
+    cursor: pointer;
+    scale: 0.95;
+}
+
+.registerProduct:active{
+    scale: 0.9;
+}
+
+.registerButtonsContent {
+    border: none;
+}
+
+.clearProduct{
+    background-color: white;
+    width: 40%;
+    padding: 10px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.clearProduct:hover{
+    opacity: 1;
+    cursor: pointer;
+    scale: 0.95;
+}
+
+.clearProduct:active{
+    scale: 0.9;
+}
+
+.divItemAdd{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    border: 1px solid black;
+    text-transform: uppercase;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 10px;
+    border: 1px solid black;
+    left: -80%;
+    animation: itemAdd 5000ms linear;
+}
+
+@keyframes itemAdd {
+    0%{
+        opacity: 0;
+        bottom: 10%;
+    }25%{
+        bottom: 35%;
+        opacity: 1;
+    }50%{
+        opacity: 0;
+        bottom: 60%;
+    }75%{
+        opacity: 0;
+        bottom: 85%;
+    }100%{
+        opacity: 0;
+        bottom: 110%;
+    }
+}

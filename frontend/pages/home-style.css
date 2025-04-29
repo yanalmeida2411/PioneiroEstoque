@@ -1,0 +1,30 @@
+body{
+    background-image: url(mercadoBackground.png);
+    background-size: cover;
+}
+.all-content-qr-code{
+    position: absolute;
+    right: 5%;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qr-code{
+    width: 20vw;
+    height: 30vh;
+}
+
+.all-content-qr-code button{
+    background-color: rgba(255, 0, 0, 0.526);
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    opacity: 0.7;
+}
+
+.all-content-qr-code button:hover{
+    cursor: pointer;
+    opacity: 1;
+    background-color: rgba(255, 0, 0, 0.775);
+}

@@ -1,0 +1,174 @@
+aside{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 92vh;
+    background-image: url(../../../produtosFundo.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28%;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-right: 1%;
+    margin-top: 1%;
+    border-radius: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+aside h1{
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.finishBuyContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.finishBuyContent span{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.finishBuyContent button{
+    width: 200px;
+    height:30px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+.carProducts{
+    height: 100%;
+    width:95%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    overflow-x: none;
+    border: 1px solid black;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    justify-content: start;
+    overflow-y:auto ;
+    overflow-x: hidden;
+    scrollbar-width:thin;
+    color: black;
+}
+
+.carProductsList{
+    display: flex;
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+    position: relative;
+    height: 5vh;
+    align-items: center;
+}
+
+.carProductsList li{
+    font-size: 17px;
+    text-transform: uppercase;
+    width:100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 3%;
+}
+.carProductsList li:nth-child(2){
+    justify-content: center;
+}
+.carProductsList button{
+    position: absolute;
+    right:3%;
+}
+
+.qtdContent{
+    display: flex;
+    position:absolute;
+    align-items: center;
+    position: absolute;
+    right: 39%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+
+}
+
+.qtdContent button:first-child{
+    position: absolute;
+    right: 65px;
+}
+
+.qtdContent button{
+    width: 5%;
+    border: none;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 40%;
+    align-items: center;
+    text-align: center;
+    background-color: #90def4;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+    opacity: 0.5;
+}
+
+.qtdContent button:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.qtdContent button:active{
+    scale: 0.9;
+}
+
+.removeBtnCart{
+    border: none;
+    width: 7%;
+    height: 40%;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 0, 0, 0.815);
+    border-radius: 50px;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.removeBtnCart:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.removeBtnCart:active{
+    scale: 0.9;
+}
+
+.orderComplete{
+    opacity: 0.7;
+}
+
+.orderComplete:hover{
+    cursor: pointer;
+    opacity: 1;
+    scale: 0.95;
+
+}
+.orderComplete:active{
+    scale: 0.9;
+
+}
+
+
