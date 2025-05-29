@@ -40,7 +40,6 @@ app.put("/:id", async (req, res) => {
     tipo_product,
     id
   );
-
   res.send(product);
 });
 
