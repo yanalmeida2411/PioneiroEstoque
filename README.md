@@ -1,5 +1,3 @@
-Documentação Sistema de Estoque Pioneiro
-
 1. Nome do Projeto
 
 Sistema de Estoque Pioneiro
@@ -53,9 +51,3 @@ DELETE - /produtos/:id - Remove um produto
 
 Adicionar e excluir produtos  
 Controle de estoque (entrada/saída)  
-
-7. Melhorias Futuras
-
-Criar dashboard com gráficos controlando a saída dos itens e os valores.
-Editar Produtos.
-Relatórios do Estoque.
