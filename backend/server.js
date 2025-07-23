@@ -64,6 +64,6 @@ app.post("/", async (req, res) => {
   res.status(201).send(product);
 });
 
-app.listen(5172, () => {
-  console.log("Servidor rodando na porta 5172...");
+app.listen(5174, () => {
+  console.log("Servidor rodando na porta 5174...");
 });

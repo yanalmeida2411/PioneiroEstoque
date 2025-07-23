@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import "./shopping-cart.css";
 import { AppContextContext } from "../../context/AppContext";
+import { AiOutlineClose } from "react-icons/ai";
 
 const ShoppingCart = () => {
   const {
@@ -9,6 +10,8 @@ const ShoppingCart = () => {
     totalQuantity,
     filter,
     orderComplete,
+    mostrarQRCode,
+    setMostrarQRCode,
   } = useContext(AppContextContext);
 
   const handleRemoveCart = (id) => {
@@ -81,13 +84,28 @@ const ShoppingCart = () => {
                 onClick={() => handleRemoveCart(product.id_product)}
                 className="removeBtnCart"
               >
-                X
+                <AiOutlineClose />
               </button>
             </ul>
           ))}
         </div>
+        <div>
+          {mostrarQRCode &&(
+            <div className="all-content-qr-code">
+              <p>Escaneie o QR Code para pagar:</p>
+              <img
+                src="\QrCodePix.png"
+                alt="QR Code para pagamento"
+                className="qr-code"
+              />
+              <button onClick={() => setMostrarQRCode(false)}>Fechar</button>
+            </div>
+          )}
+        </div>
+
         <div className="finishBuyContent">
-          <span>Total R${totalQuantity.toFixed(2).replace(".", ",")}</span>
+          <p>Total</p>
+          <span> R${totalQuantity.toFixed(2).replace(".", ",")}</span>
           <button
             className="orderComplete"
             onClick={() => orderComplete(totalQuantity)}

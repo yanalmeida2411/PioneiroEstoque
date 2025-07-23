@@ -27,10 +27,9 @@ function AppContextProvider({ children }) {
   const updateStock = async (id, quantidadeComprada) => {
     const productInStock = filter.find((product) => product.id_product === id);
 
-    const response = await axios.put(`http://localhost:5172/${id}`, {
+    const response = await axios.put(`http://localhost:5174/${id}`, {
       name_product: productInStock.name_product,
-      quantidade_product:
-        productInStock.quantidade_product - quantidadeComprada,
+      quantidade_product:productInStock.quantidade_product - quantidadeComprada,
       valor_product: productInStock.valor_product,
       tipo_product: productInStock.tipo_product,
     });

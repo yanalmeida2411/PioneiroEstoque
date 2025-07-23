@@ -2,6 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import "./register.css";
 import { AppContextContext } from "../../context/AppContext";
 import axios from "axios";
+import { AiOutlineClose } from "react-icons/ai";
+
 
 const Register = () => {
   const {
@@ -37,7 +39,7 @@ const Register = () => {
       };
 
       if (newProduct) {
-        const response = await axios.post("http://localhost:5172", newProduct);
+        const response = await axios.post("http://localhost:5174", newProduct);
         const createdProduct = response.data;
         setFilter((prevProducts) => [...prevProducts, createdProduct]);
         setProducts((prevProducts) => [...prevProducts, createdProduct]);
@@ -51,17 +53,17 @@ const Register = () => {
       setType("");
     }
     setTimeout(() => {
-      setItemAddToEstoque(true);  
+      setItemAddToEstoque(true);
       setTimeout(() => {
         setItemAddToEstoque(false);
-      },4000);
-    },0);
+      }, 4000);
+    }, 0);
   };
 
   const clearProducts = () => {
     setName("");
-    setQuantity(0);
-    setValue(0);
+    setQuantity("");
+    setValue("");
     setType("");
   };
 
@@ -73,7 +75,7 @@ const Register = () => {
             className="closeRegister"
             onClick={() => setShowRegister(!showRegister)}
           >
-            X
+            <AiOutlineClose />
           </button>
           <label htmlFor="nome">Nome</label>
           <input
@@ -100,13 +102,24 @@ const Register = () => {
             name="valor"
           />
           <label htmlFor="tipo">Tipo</label>
-          <input
-            type="text"
-            placeholder="Tipo do Produto"
+          <select
             onChange={(e) => setType(e.target.value)}
             value={type}
             name="tipo"
-          />
+            defaultValue={""}
+            className="selectPlaceholder"
+            style={{
+              color: type === "" ? "gray" : "black",
+            }}
+          >
+            <option value="" hidden>
+              Tipo do Produto
+            </option>
+            <option value="fardamentos">Fardamentos</option>
+            <option value="roupas">Roupas</option>
+            <option value="acessorios">Acessórios</option>
+            <option value="outros">Outros</option>
+          </select>
           <button className="registerProduct" onClick={addProducts}>
             Cadastrar
           </button>

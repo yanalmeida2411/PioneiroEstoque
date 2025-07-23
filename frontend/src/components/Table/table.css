@@ -171,7 +171,7 @@ nav{
     flex-direction: column;
     gap: 10px;
     align-items: center;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 .configContent button{
@@ -180,12 +180,12 @@ nav{
 
 .removeProduct{
     border: 1px solid black;
-    width: 60%;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 0, 0, 0.87);
-    border-radius: 50px;
+    border-radius: 10px;
     opacity: 0.8;
 }
 
@@ -200,14 +200,13 @@ nav{
 
 .sellProduct{
     border: 1px solid black;
-    width: 140%;
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #88d390;
     border-radius: 10px;
     opacity: 0.8;
-    text-transform: uppercase;
 }
 
 .sellProduct:hover{

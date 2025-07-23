@@ -32,7 +32,7 @@
     font-size: 20px;
 }
 
-.allSectionContent input{
+.allSectionContent input, .allSectionContent select{
     margin-bottom: 20px;
     border-radius: 10px;
     border: 1px solid black;
@@ -132,6 +132,10 @@
     border: 1px solid black;
     left: -80%;
     animation: itemAdd 5000ms linear;
+}
+
+.selectPlaceholder{
+    color: gray;
 }
 
 @keyframes itemAdd {

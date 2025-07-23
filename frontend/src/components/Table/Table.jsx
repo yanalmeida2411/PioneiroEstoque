@@ -3,6 +3,8 @@ import "./table.css";
 import axios from "axios";
 import { AppContextContext } from "../../context/AppContext";
 import Register from "../Register/Register";
+import { AiOutlineClose } from "react-icons/ai";
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Table = () => {
   const {
@@ -20,7 +22,7 @@ const Table = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5172/")
+      .get("http://localhost:5174/")
       .then((response) => {
         setProducts(response.data);
         setFilter(response.data);
@@ -33,7 +35,7 @@ const Table = () => {
 
   const handleRemove = async (id) => {
     try {
-      await axios.delete(`http://localhost:5172/${id}`);
+      await axios.delete(`http://localhost:5174/${id}`);
       setFilter((prevItens) =>
         prevItens.filter((product) => product.id_product !== id)
       );
@@ -65,7 +67,7 @@ const Table = () => {
       (product) => product.name_product.toLowerCase() === name.toLowerCase()
     );
     setFilter(filterProductName);
-    setSearch("")
+    setSearch("");
   };
 
   const handleSell = (id) => {
@@ -169,13 +171,13 @@ const Table = () => {
                         onClick={() => handleRemove(product.id_product)}
                         className="removeProduct"
                       >
-                        X
+                        <AiOutlineClose />
                       </button>
                       <button
                         onClick={() => handleSell(product.id_product)}
                         className="sellProduct"
                       >
-                        Vender
+                        <FaShoppingCart />
                       </button>
                     </div>
                   </li>

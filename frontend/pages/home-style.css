@@ -4,11 +4,12 @@ body{
 }
 .all-content-qr-code{
     position: absolute;
-    right: 5%;
+    right: 15%;
     top: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:black;
 }
 .qr-code{
     width: 20vw;

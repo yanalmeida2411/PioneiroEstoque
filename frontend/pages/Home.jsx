@@ -10,17 +10,6 @@ const Home = () => {
     <>
       <Table />
       <ShoppingCart />
-      {mostrarQRCode && (
-        <div className="all-content-qr-code">
-          <p>Escaneie o QR Code para pagar:</p>
-          <img
-            src="\QrCodePix.png"
-            alt="QR Code para pagamento"
-            className="qr-code"
-          />
-          <button onClick={()=>setMostrarQRCode(false)}>Fechar</button>
-        </div>
-      )}
     </>
   );
 };
